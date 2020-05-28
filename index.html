@@ -19,9 +19,9 @@
       </g>
       <g id="wizard-head">
         <polygon points="48 86 53 86 53 15 58 15 58 10 62 10 62 5 58 5 58 10 48 10 48 5 43 5 43 10 48 10 48 14 48 86"
-                 fill="#be3827"/>
+                fill="#be3827"/>
         <polygon points="9 37 19 37 19 23 48 23 48 28 53 28 53 42 48 42 48 51 14 51 14 46 9 46 9 37"
-                 fill="#fbd868"/>
+                fill="#fbd868"/>
         <rect x="33" y="39" width="10" height="5" fill="#bec1c3"/>
         <rect x="14" y="37" width="5" height="9" fill="#bec1c3"/>
         <polygon
@@ -81,8 +81,8 @@
         </div>
         <label>
           <input type="text" name="username"
-                 maxlength="25" required
-                 class="setup-user-name" value="Синий Пендальф"/>
+                maxlength="25" required
+                class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
 
@@ -161,8 +161,7 @@
 </div>
 
 <footer>
-  <p><a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy"
-                                                              width="130">Сделано в HTML Academy</a>в 2017 году</p>
+  <p><a href="http://htmlacademy.ru" class="footer-link"><img src="img/htmlacademy-logo.png" alt="HTML Academy" width="130">Сделано в HTML Academy</a>в 2017 году</p>
 </footer>
 
 <template id="similar-wizard-template" style="display: none">
@@ -181,6 +180,29 @@
   </div>
 </template>
 
+<script>
+  var fireballSize = 22;
+
+  var getFireballSpeed = function(isWindFromLeft) {
+    if (isWindFromLeft) {
+      return 5;
+    }
+
+    return 2;
+  }
+
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var wizardHeight =  1.337 * wizardWidth;
+
+  var getWizardX = function(gameFieldWidth) {
+    return (gameFieldWidth - wizardWidth) / 2;
+  }
+
+  var getWizardY = function (gameFieldHeight) {
+    return gameFieldHeight / 3;
+  }
+</script>
 <script src="js/game.js"></script>
 
 </body>
