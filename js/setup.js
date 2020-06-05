@@ -47,10 +47,15 @@ var renderWizard = function (wizard) {
 };
 
 // Накопление и Отрисовка DOM-элементов из Fragment
-var fragment = document.createDocumentFragment();
-for (var i = 0; i < arrWizard.length; i++) {
-  fragment.appendChild(renderWizard(arrWizard[i]));
-}
-wizardListElement.appendChild(fragment);
+var writeElement = function () {
+  var fragment = document.createDocumentFragment();
+  for (var i = 0; i < arrWizard.length; i++) {
+    fragment.appendChild(renderWizard(arrWizard[i]));
+  }
+
+  wizardListElement.appendChild(fragment);
+};
+
+writeElement();
 
 document.querySelector('.setup-similar').classList.remove('hidden');
