@@ -42,6 +42,8 @@ window.renderStatistics = function (ctx, players, times) {
   ctx.fillText('Ура вы победили!', CLOUD_X + GAP_X, GAP_Y);
   ctx.fillText('Список результатов:', CLOUD_X + GAP_X, GAP_Y + TEXT_HEIGHT);
 
+  var maxTime = getMaxElement(times);
+
   for (var i = 0; i < players.length; i++) {
     ctx.fillStyle = COLOR_TEXT;
     ctx.fillText(players[i], CLOUD_X + GAP_X + (COLUMN_WIDTH + GAP_X) * i, CLOUD_Y - GAP_Y);
@@ -53,7 +55,6 @@ window.renderStatistics = function (ctx, players, times) {
       ctx.fillStyle = 'hsl(240,' + saturate + '%, 50%)';
     }
 
-    var maxTime = getMaxElement(times);
     var timeColumn = Math.round((barHeight * times[i]) / maxTime);
 
     ctx.fillRect(CLOUD_X + GAP_X + (COLUMN_WIDTH + GAP_X) * i, CLOUD_Y - GAP_Y - TEXT_HEIGHT, COLUMN_WIDTH, timeColumn);
