@@ -32,7 +32,7 @@ var createWizardArr = function () {
 };
 
 var wizardListElement = document.querySelector('.setup-similar-list');
-var wizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
+var wizardTemplate = document.querySelector('#similar-wizard-template').content;
 var arrWizard = createWizardArr();
 
 // Создание DOM - элементов из шаблона
