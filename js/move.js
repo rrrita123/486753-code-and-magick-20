@@ -33,7 +33,6 @@
           y: moveEvt.clientY
         };
 
-        // console.log(setupDialogElement.style.left);
         setupDialogElement.style.top = (setupDialogElement.offsetTop - shift.y) + 'px';
         setupDialogElement.style.left = (setupDialogElement.offsetLeft - shift.x) + 'px';
       };
