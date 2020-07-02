@@ -3,6 +3,8 @@
 (function () {
   // Открытие/закрытие окна настройки персонажа
   var FIREBALL_COLOR = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
+  var COAT_COLOR = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
+  var EYES_COLOR = ['black', 'red', 'blue', 'yellow', 'green'];
 
   var setupOpen = document.querySelector('.setup-open');
   var userPopup = document.querySelector('.setup');
@@ -25,13 +27,13 @@
 
   // Обработчик выбора цвета мантии
   var onCoatChangeColor = function () {
-    var colorCoat = window.colorize.changeColor(wizardCoat, window.setup.COAT_COLOR);
+    var colorCoat = window.colorize.changeColor(wizardCoat, COAT_COLOR);
     userPopup.querySelector('input[name=coat-color]').value = colorCoat;
   };
 
   // Обработчик выбора цвета глаз
   var onEyesChangeColor = function () {
-    var colorEyes = window.colorize.changeColor(wizardEyes, window.setup.EYES_COLOR);
+    var colorEyes = window.colorize.changeColor(wizardEyes, EYES_COLOR);
     userPopup.querySelector('input[name=eyes-color]').value = colorEyes;
   };
 
